@@ -10,9 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
-import os
 from pathlib import Path
-from .env import SECRET_KEY
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY is now imported from env.py
+SECRET_KEY = 'django-insecure-$g7z(h=o#b+rk%8iax3#0!rh3%+i&2#_e3sj-!j*#nhfu8m!3('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tasks',
 ]
 
 MIDDLEWARE = [
